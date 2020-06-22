@@ -1,6 +1,7 @@
 # haus.py
 import logging
 import time
+from time import sleep
 import RPi.GPIO as GPIO
 from flask import Flask, render_template
 from flask_ask import Ask, statement, question, session
@@ -26,9 +27,15 @@ def fernseher(status):
     if status == "an":
         print('AN')
         GPIO.output(17, GPIO.HIGH)  # GPIO 0
+        sleep(0.5)
+        GPIO.output(18, GPIO.HIGH)  # GPIO 1
+        sleep(0.5)
+        GPIO.output(27, GPIO.HIGH)  # GPIO 2
     if status == "aus":
         print('AUS')
         GPIO.output(17, GPIO.LOW)  # GPIO 0
+        GPIO.output(18, GPIO.LOW)  # GPIO 1
+        GPIO.output(27, GPIO.LOW)  # GPIO 2
     status = render_template('fernseher', status=status)
     return question(status)
 
