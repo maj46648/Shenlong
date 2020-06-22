@@ -35,7 +35,7 @@ def Gpio_Intent(status, room):
         GPIO.output(17, GPIO.LOW)
         return statement('Licht wurde ausgeschaltet')
     else:
-        return statement('Sorry, der Befehl ist leider nicht möglich.')
+        return statement('Sorry, der Befehl ist leider nicht moeglich.')
 
 @ask.intent('AMAZON.HelpIntent')
 def help():
