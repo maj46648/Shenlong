@@ -24,7 +24,7 @@ def gruss():
 @ask.intent("FernseherIntent", mapping={'status': 'status'})
 def fernseher(status):
     print('test=>{}'.format(status))
-    if status == "an":
+    if status == "an" or status == "erscheine":
         print('AN')
         GPIO.output(17, GPIO.HIGH)  # GPIO 0
         sleep(0.5)
