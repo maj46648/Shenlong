@@ -1,0 +1,4 @@
+gruss: Guude
+fernseher: Fernseher ist {{status}}
+licht: Licht ist {{status}}
+dose: Steckdose ist {{status}}

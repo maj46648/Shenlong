@@ -20,7 +20,7 @@ def gruss():
     return question(gruss)
 
 
-@ask.intent("FernseherIntent",mapping={'status': 'status'})
+@ask.intent("FernseherIntent", mapping={'status': 'status'})
 def fernseher(status):
     print('test=>{}'.format(status))
     if status == "an":
