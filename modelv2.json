@@ -1,0 +1,81 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "raspberry pi",
+            "modelConfiguration": {
+                "fallbackIntentSensitivity": {
+                    "level": "LOW"
+                }
+            },
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "LightIntent",
+                    "slots": [
+                        {
+                            "name": "status",
+                            "type": "STATUS",
+                        }
+                    ],
+                    "samples": [
+                        "das licht {status}",
+                        "schalte das licht {status}",
+                        "mach das licht {status}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "STATUS",
+                    "values": [
+                        {
+                            "id": "off",
+                            "name": {
+                                "value": "off",
+                                "synonyms": [
+                                    "auszuschalten",
+                                    "auszumachen",
+                                    "ausmachen",
+                                    "ausschalten",
+                                    "aus"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "on",
+                            "name": {
+                                "value": "on",
+                                "synonyms": [
+                                    "anzuschalten",
+                                    "anzumachen",
+                                    "anmachen",
+                                    "anschalten",
+                                    "an"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
